@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BaseNavigationViewController.h
 //  Cocoa_Test
 //
 //  Created by feii on 17/3/10.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BaseNavigationViewController : UINavigationController
 
 @end
-
