@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  Cocoa_Test
+//
+//  Created by feii on 17/3/13.
+//  Copyright © 2017年 feii. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Constant.h"
+
+#endif /* PrefixHeader_pch */

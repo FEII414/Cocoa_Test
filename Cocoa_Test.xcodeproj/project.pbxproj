@@ -16,6 +16,9 @@
 		A109187E1E72867900D454E8 /* BaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A109187D1E72867900D454E8 /* BaseTabBarViewController.m */; };
 		A10918811E72869500D454E8 /* BaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10918801E72869500D454E8 /* BaseNavigationViewController.m */; };
 		A10918841E72870D00D454E8 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10918831E72870D00D454E8 /* BaseViewController.m */; };
+		A161A2EA1E76B428009ECC39 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A161A2E91E76B428009ECC39 /* CollectionViewController.m */; };
+		A161A2EF1E76B428009ECC39 /* CustomCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A161A2EE1E76B428009ECC39 /* CustomCollectionViewFlowLayout.m */; };
+		A161A2F11E76B428009ECC39 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A161A2F01E76B428009ECC39 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,13 @@
 		A10918801E72869500D454E8 /* BaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationViewController.m; sourceTree = "<group>"; };
 		A10918821E72870D00D454E8 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		A10918831E72870D00D454E8 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		A161A2E81E76B428009ECC39 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		A161A2E91E76B428009ECC39 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		A161A2EB1E76B428009ECC39 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		A161A2EC1E76B428009ECC39 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		A161A2ED1E76B428009ECC39 /* CustomCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		A161A2EE1E76B428009ECC39 /* CustomCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		A161A2F01E76B428009ECC39 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,7 @@
 		A10918371E7283A400D454E8 = {
 			isa = PBXGroup;
 			children = (
+				A161A2F01E76B428009ECC39 /* Default-568h@2x.png */,
 				A10918421E7283A400D454E8 /* Cocoa_Test */,
 				A109185C1E7283A400D454E8 /* Cocoa_TestTests */,
 				A10918671E7283A400D454E8 /* Cocoa_TestUITests */,
@@ -108,6 +119,7 @@
 			children = (
 				A109187B1E7285A900D454E8 /* Base */,
 				A10918771E72853100D454E8 /* UIKit Dynamics */,
+				A161A2E71E76B401009ECC39 /* UICollectionView */,
 				A10918461E7283A400D454E8 /* AppDelegate.h */,
 				A10918471E7283A400D454E8 /* AppDelegate.m */,
 				A109184F1E7283A400D454E8 /* Assets.xcassets */,
@@ -161,8 +173,21 @@
 				A10918801E72869500D454E8 /* BaseNavigationViewController.m */,
 				A10918821E72870D00D454E8 /* BaseViewController.h */,
 				A10918831E72870D00D454E8 /* BaseViewController.m */,
+				A161A2EB1E76B428009ECC39 /* Constant.h */,
+				A161A2EC1E76B428009ECC39 /* PrefixHeader.pch */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		A161A2E71E76B401009ECC39 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A161A2E81E76B428009ECC39 /* CollectionViewController.h */,
+				A161A2E91E76B428009ECC39 /* CollectionViewController.m */,
+				A161A2ED1E76B428009ECC39 /* CustomCollectionViewFlowLayout.h */,
+				A161A2EE1E76B428009ECC39 /* CustomCollectionViewFlowLayout.m */,
+			);
+			path = UICollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +257,7 @@
 				TargetAttributes = {
 					A109183F1E7283A400D454E8 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = B285PBC7R4;
 						ProvisioningStyle = Automatic;
 					};
 					A10918581E7283A400D454E8 = {
@@ -272,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A10918501E7283A400D454E8 /* Assets.xcassets in Resources */,
+				A161A2F11E76B428009ECC39 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,10 +324,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A109187A1E72856100D454E8 /* DynamicsViewController.m in Sources */,
+				A161A2EA1E76B428009ECC39 /* CollectionViewController.m in Sources */,
 				A10918841E72870D00D454E8 /* BaseViewController.m in Sources */,
 				A10918811E72869500D454E8 /* BaseNavigationViewController.m in Sources */,
 				A10918481E7283A400D454E8 /* AppDelegate.m in Sources */,
 				A10918451E7283A400D454E8 /* main.m in Sources */,
+				A161A2EF1E76B428009ECC39 /* CustomCollectionViewFlowLayout.m in Sources */,
 				A109187E1E72867900D454E8 /* BaseTabBarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,7 +460,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B285PBC7R4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Cocoa_Test/Base/PrefixHeader.pch";
 				INFOPLIST_FILE = Cocoa_Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "FEII.HELLO.Cocoa-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -442,7 +475,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = B285PBC7R4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Cocoa_Test/Base/PrefixHeader.pch";
 				INFOPLIST_FILE = Cocoa_Test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "FEII.HELLO.Cocoa-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -514,6 +551,7 @@
 				A109186F1E7283A400D454E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A10918701E7283A400D454E8 /* Build configuration list for PBXNativeTarget "Cocoa_TestTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +560,7 @@
 				A10918721E7283A400D454E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A10918731E7283A400D454E8 /* Build configuration list for PBXNativeTarget "Cocoa_TestUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +569,7 @@
 				A10918751E7283A400D454E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

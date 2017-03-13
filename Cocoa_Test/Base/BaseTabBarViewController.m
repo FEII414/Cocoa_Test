@@ -9,6 +9,7 @@
 #import "BaseTabBarViewController.h"
 #import "BaseNavigationViewController.h"
 #import "DynamicsViewController.h"
+#import "CollectionViewController.h"
 
 @interface BaseTabBarViewController ()
 
@@ -18,15 +19,31 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tabBar.tintColor = [UIColor blueColor];
     
     DynamicsViewController *dynamicsVc = [[DynamicsViewController alloc]init];
-    dynamicsVc.tabBarItem.title = @"tab 1";
-    dynamicsVc.tabBarItem.image = [UIImage imageNamed:@"tab-1"];
-//    dynamicsVc.tabBarItem.badgeValue = @"123";
     
-    BaseNavigationViewController *dynamicsNav = [[BaseNavigationViewController alloc]initWithRootViewController:dynamicsVc];
-    [self addChildViewController:dynamicsNav];
+    [self addViewControllers:dynamicsVc withTitle:@"tab 1" withDefaultImage:[UIImage imageNamed:@"tab-1"] withSelectedImage:[UIImage imageNamed:@"tab-1"]];
+    
+    CollectionViewController *collectionVc = [[CollectionViewController alloc]init];
+    
+    [self addViewControllers:collectionVc withTitle:@"tab 2" withDefaultImage:[UIImage imageNamed:@"tab-2"] withSelectedImage:nil];
 
+}
+
+- (void)addViewControllers:(UIViewController*)childControllers withTitle:(NSString*)title withDefaultImage:(UIImage*)defaultImage withSelectedImage:(UIImage*)selectedImage{
+    
+    UITabBarItem *tabBarItem = [[UITabBarItem alloc]initWithTitle:title image:defaultImage selectedImage:selectedImage];
+    childControllers.tabBarItem = tabBarItem;
+    if (selectedImage) {
+        childControllers.tabBarItem.selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    }
+    
+//    childControllers.tabBarItem.badgeValue
+    BaseNavigationViewController *dynamicsNav = [[BaseNavigationViewController alloc]initWithRootViewController:childControllers];
+    [self addChildViewController:dynamicsNav];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
