@@ -210,7 +210,7 @@ static float     const cellWidth = 30;
     if (_mainCollection == nil) {
         
         CustomCollectionViewFlowLayout *layout = [[CustomCollectionViewFlowLayout alloc]init];
-        layout.itemSize = CGSizeMake(100, 100);
+        layout.itemSize = CGSizeMake(120, 120);
         layout.minimumInteritemSpacing = 5.0f;
         layout.minimumLineSpacing = 5.0f;
         layout.sectionInset = UIEdgeInsetsMake(-10.f, 10.f, 5.f, 10.f);
@@ -235,6 +235,10 @@ static float     const cellWidth = 30;
     
     if (_arrayData==nil) {
         _arrayData = [[NSMutableArray alloc]initWithCapacity:5];
+        [_arrayData addObject:@""];
+        [_arrayData addObject:@""];
+        [_arrayData addObject:@""];
+        [_arrayData addObject:@""];
         [_arrayData addObject:@""];
         [_arrayData addObject:@""];
         [_arrayData addObject:@""];
