@@ -40,7 +40,7 @@
     }
     
     NSArray *arrayPathImage = @[@"first",@"second",@"third",@"forth",@"fifth",@"sixth"];
-    NSArray *arrayHeight = @[@100,@200,@150,@120,@300,@250];
+    NSArray *arrayHeight = @[@200,@420,@250,@220,@400,@300];
     
 //    for (NSString *dicT in arrayPathImage) {
 //        
