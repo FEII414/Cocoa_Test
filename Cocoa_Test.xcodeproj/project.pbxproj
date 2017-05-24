@@ -19,6 +19,7 @@
 		A161A2EA1E76B428009ECC39 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A161A2E91E76B428009ECC39 /* CollectionViewController.m */; };
 		A161A2EF1E76B428009ECC39 /* CustomCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = A161A2EE1E76B428009ECC39 /* CustomCollectionViewFlowLayout.m */; };
 		A161A2F11E76B428009ECC39 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A161A2F01E76B428009ECC39 /* Default-568h@2x.png */; };
+		A1B3EA661ED5D1C500B47190 /* STCarouselScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B3EA651ED5D1C500B47190 /* STCarouselScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		A161A2ED1E76B428009ECC39 /* CustomCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		A161A2EE1E76B428009ECC39 /* CustomCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		A161A2F01E76B428009ECC39 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		A1B3EA641ED5D1C500B47190 /* STCarouselScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STCarouselScrollView.h; sourceTree = "<group>"; };
+		A1B3EA651ED5D1C500B47190 /* STCarouselScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STCarouselScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,7 @@
 		A10918421E7283A400D454E8 /* Cocoa_Test */ = {
 			isa = PBXGroup;
 			children = (
+				A1B3EA631ED5D1C500B47190 /* threepart */,
 				A109187B1E7285A900D454E8 /* Base */,
 				A10918771E72853100D454E8 /* UIKit Dynamics */,
 				A161A2E71E76B401009ECC39 /* UICollectionView */,
@@ -188,6 +192,15 @@
 				A161A2EE1E76B428009ECC39 /* CustomCollectionViewFlowLayout.m */,
 			);
 			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		A1B3EA631ED5D1C500B47190 /* threepart */ = {
+			isa = PBXGroup;
+			children = (
+				A1B3EA641ED5D1C500B47190 /* STCarouselScrollView.h */,
+				A1B3EA651ED5D1C500B47190 /* STCarouselScrollView.m */,
+			);
+			path = threepart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +341,7 @@
 				A10918841E72870D00D454E8 /* BaseViewController.m in Sources */,
 				A10918811E72869500D454E8 /* BaseNavigationViewController.m in Sources */,
 				A10918481E7283A400D454E8 /* AppDelegate.m in Sources */,
+				A1B3EA661ED5D1C500B47190 /* STCarouselScrollView.m in Sources */,
 				A10918451E7283A400D454E8 /* main.m in Sources */,
 				A161A2EF1E76B428009ECC39 /* CustomCollectionViewFlowLayout.m in Sources */,
 				A109187E1E72867900D454E8 /* BaseTabBarViewController.m in Sources */,

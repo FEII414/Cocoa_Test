@@ -7,11 +7,17 @@
 //
 
 #import "DynamicsViewController.h"
+#import "STCarouselScrollView.h"
 
 @interface DynamicsViewController ()
 
 @property (nonatomic , strong) UIDynamicAnimator *animator;
 @property (nonatomic , strong) UIImageView *oneStarImg;
+
+@property (nonatomic,strong)STCarouselScrollView *imageScrollView;
+@property (nonatomic,strong)NSMutableArray *getUrlImg;
+@property (nonatomic,strong)NSMutableArray *getUrlImgSize;//网络上捉取图片大小
+@property (nonatomic,assign)CGFloat tempH2 ;
 
 @end
 
@@ -24,6 +30,46 @@
     self.view.backgroundColor = [UIColor purpleColor];
     
     [self setGravityAnimator];
+    
+    if (!_getUrlImg) {
+        _getUrlImg = [[NSMutableArray alloc]init];
+        _getUrlImgSize = [[NSMutableArray alloc]init];
+    }else{
+        [_getUrlImg removeAllObjects];
+        [_getUrlImgSize removeAllObjects];
+    }
+    
+    NSArray *arrayPathImage = @[@"first",@"second",@"third",@"forth",@"fifth",@"sixth"];
+    NSArray *arrayHeight = @[@100,@200,@150,@120,@300,@250];
+    
+//    for (NSString *dicT in arrayPathImage) {
+//        
+//        CGSize imgSize;
+//        NSString *urlImg = [NSString stringWithFormat:@"%@", dicT];
+//        NSRange lastIndex = [urlImg rangeOfString:@"@" options:NSBackwardsSearch];
+//        if (lastIndex.location != NSNotFound) {
+//            NSString *ratioStr = [urlImg substringWithRange:NSMakeRange(lastIndex.location + 1, 4)];
+//            CGFloat ratio = [ratioStr floatValue];
+//            imgSize = CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH / ratio);
+//        } else {
+//            imgSize = CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH);
+//        }
+//        float height = imgSize.height/imgSize.width*SCREEN_WIDTH;
+//        [_getUrlImgSize addObject:@(height)];
+//        [_getUrlImg addObject:urlImg];
+//    }
+    
+    __weak typeof(self) weakSelf = self;
+    [self.view addSubview:self.imageScrollView];
+    [self.imageScrollView setImageArray:arrayPathImage andHeightArray:arrayHeight didScroll:^(CGRect currentFrame) {
+        
+        float height = currentFrame.size.height;
+        weakSelf.tempH2 = height;
+        
+    } endScroll:^(NSUInteger currentIndex) {
+        
+        
+    }];
 
 }
 
@@ -63,5 +109,11 @@
     return _oneStarImg;
 }
 
+-(STCarouselScrollView*)imageScrollView{
+    if (!_imageScrollView) {
+        _imageScrollView = [[STCarouselScrollView alloc]initWithFrame:CGRectMake(0, 50, SCREEN_WIDTH, 123)];
+    }
+    return _imageScrollView;
+}
 
 @end

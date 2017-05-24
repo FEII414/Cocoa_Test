@@ -10,7 +10,6 @@
 #import "BaseNavigationViewController.h"
 #import "DynamicsViewController.h"
 #import "CollectionViewController.h"
-#import "FEITableViewController.h"
 
 @interface BaseTabBarViewController ()
 
@@ -30,9 +29,6 @@
     
     [self addViewControllers:collectionVc withTitle:@"tab 2" withDefaultImage:[UIImage imageNamed:@"tab-2"] withSelectedImage:nil];
     
-    FEITableViewController *tableviewVc = [[FEITableViewController alloc]init];
-    
-    [self addViewControllers:tableviewVc withTitle:@"tab 3" withDefaultImage:[UIImage imageNamed:@"tab-3"] withSelectedImage:nil];
 
 }
 
