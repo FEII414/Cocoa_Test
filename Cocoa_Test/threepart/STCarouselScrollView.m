@@ -7,6 +7,7 @@
 //
 
 #import "STCarouselScrollView.h"
+#import "UIImageView+WebCache.h"
 #define SELF_WIDTH CGRectGetWidth(self.frame)
 #define SELF_MINX  CGRectGetMinX(self.frame)
 #define SELF_MINY  CGRectGetMinY(self.frame)
@@ -109,6 +110,10 @@
         self.mainScrollView.contentSize = CGSizeMake(SELF_WIDTH*2, 0);
         
     }
+    
+    self.tag = 0;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickTap:)];
+    [self addGestureRecognizer:tap];
 }
 
 - (void)setImageView:(UIImageView*)imageView withIndex:(int)imageIndex{
@@ -118,7 +123,7 @@
         imageView.image = [UIImage imageNamed:self.arrayImage[imageIndex]];
     }else{
         //添加将要出现视图的网络图片  需要 #import "UIImageView+WebCache.h"
-//        [imageView sd_setImageWithURL:[NSURL URLWithString:self.arrayImage[imageIndex]]];
+        [imageView sd_setImageWithURL:[NSURL URLWithString:self.arrayImage[imageIndex]]];
     }
     
 }
@@ -293,6 +298,14 @@
     }
 }
 
+- (void)clickTap:(UITapGestureRecognizer*)tap{
+    
+    if (_clickBlock) {
+        _clickBlock((int)tap.view.tag);
+    }
+    
+}
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     
     if (_isNext == YES) {
@@ -316,6 +329,9 @@
         }
     }
     NSLog(@"我是现在的图片%u",_currentIndex);
+    self.tag = _currentIndex;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickTap:)];
+    [self addGestureRecognizer:tap];
     self.labelPage.text = [NSString stringWithFormat:@"%u/%ld",_currentIndex+1,_arrayCount];
     if (_endScrollBlock) {
         self.endScrollBlock(_currentIndex);

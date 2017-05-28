@@ -14,6 +14,8 @@ typedef void (^EndScrollBlock)(NSUInteger currentIndex);
 
 @property (nonatomic , strong) UIScrollView *mainScrollView;
 
+@property (nonatomic , copy) void(^clickBlock)(int index);
+
 /**
  * 用initWithFrame来初始化
  * - (instancetype)initWithFrame:(CGRect)frame;
